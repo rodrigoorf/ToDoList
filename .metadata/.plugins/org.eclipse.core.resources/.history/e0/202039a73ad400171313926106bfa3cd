@@ -1,0 +1,15 @@
+
+public class Principal {
+
+	public static void main(String[] args) {
+		int[] numeros = {9, 3, 9, 3, 9, 9};
+		Solution s = new Solution();
+		int result = s.solution(numeros);
+		if (result == -167){
+			System.out.println("Array não satisfaz a condição desejada");
+		} else {
+			System.out.println(result);
+		}
+	}
+
+}
