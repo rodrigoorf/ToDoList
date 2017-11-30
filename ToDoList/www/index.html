@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="css/materialize.css">
+  		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  		<script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+  		<script src="js/materialize.min.js" type="text/javascript"></script>
+  		<script type="text/javascript" src="cordova.js"></script>
+  		<script src="js/index.js" type="text/javascript"></script>
+        <title>To-do List</title>
+    </head>
+    <body>
+    	<style>
+    		.btn{
+    			background-color: #2196f3;
+    		}
+    	</style>
+    	<script>
+    		$(document).ready(function(){
+    			selectTarefa();
+    			selectTarefasPendentes();
+    			selectTarefasConcluidas();
+    		});
+
+    		function confirmaExclusao(id){
+    			if (window.confirm("Tem certeza?") == true){
+    				apagarTarefa(id);
+    			}
+    		}
+
+    		function editaTarefa(id){
+    			window.location = "editarTarefa.html#" + id;
+    		}
+    	</script>
+        <a href="novaTarefa.html" id="novaTarefa" class="waves-effect waves-light btn center-align"><i class="material-icons left">add</i>Nova tarefa</a><br>
+        <ul class="tabs">
+    		<li class="tab col s3"><a href="#cardsTodas">Todas</a></li>
+    		<li class="tab col s3"><a class="active" href="#cardsPendentes">Pendentes</a></li>
+    		<li class="tab col s3"><a href="#cardsConcluidas">Concluídas</a></li>
+  		</ul>
+  		<div id="cardsTodas">
+  		</div>
+  		<div id="cardsPendentes">
+  		</div> 
+  		<div id="cardsConcluidas">
+  		</div>
+    </body>
+</html>
